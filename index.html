@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <link rel="stylesheet" href="/css/home.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+    </head>
+    <body>
+        <div class="login-container">
+            <div id="id01" class="modal">
+              <form class="modal-content" >
+                <div class="container">
+                    <figure class="logo-modal"><img src="../img/logo.png" alt=""></figure>
+                  <h1 id="dynamic-title">Evento de lanzamiento</h1>
+                  <p id="dynamic-para">Por favor ingresa los siguientes datos para registrarte o da click en Ingresar para iniciar sesión y ver la transmisión</p>
+                  <hr>
+                  <div class="dynamic-elements">
+                  <label for="name"><b>Nombre</b></label>
+                  <input id="nombre" type="text" placeholder="" name="nombre" required>
+                </div>
+
+                  <label for="email"><b>E-mail</b></label>
+                  <input id="correo" type="text" placeholder="" name="email" required>
+                
+                  <div class="dynamic-elements">
+                    <label for="telephone"><b>Teléfono</b></label>
+                    <input id="phone" type="text" placeholder="" name="telefono" required>
+                  </div>
+
+
+                  <label for="psw"><b>Contraseña</b></label>
+                  <input id="password" type="password" placeholder="" name="psw" required>
+                    <div class="dynamic-elements">
+                  <label for="psw-repeat"><b>Repetir contraseña</b></label>
+                  <input id="password-v" type="password" placeholder="" name="psw-repeat" required>
+                </div>
+                  <p id="terms">Al registrarte estas aceptando nuestro <a href="" style="color:dodgerblue">Aviso de privacidad</a>.</p>
+            
+                  <div class="clearfix">
+                    <button id="sign-up" type="" onclick="addUser()" class="cancelbtn">Registrarme</button>
+                    <button id="log-in"  type="" onclick="cleanAndChange(this)" class="signupbtn">Ingresar</button>
+                    <p id="alert" class="d-none"></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+        <div class="counter-container">
+            <figure><img src="../img/logo.png" alt=""></figure>
+        
+        <div id="counter">
+        </div>
+
+    </div>
+        
+        <div id="contenedor" style="">
+           <header class="cabecera">
+                <div class="cabeceraInner">
+                    <div class="descargaAppContenedor">
+                        <!--<a class="btnAppStore" href="#"></a>
+                        <a class="btnPlayStore" href="#"></a>
+                        <span style="opacity: 0.75">DESCARGA LA APP</span>-->
+                    </div>
+
+                    <div class="mainLogoContenedor">
+                        <a href="" class="mainLogo">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="contactoHeaderCont">
+                        <!--<span id="comoF">¿CÓMO FUNCIONA?</span>
+                        <a href="" id="menuContacto">CONTACTO</a>
+
+                        <button type="button" id="btnRegistro">¡REGÍSTRATE AHORA!</button>-->
+                    </div>
+                </div>
+            </header>
+
+
+            <div class="seccion0">
+
+                <div class="flechasContenedor">
+                    <img src="../img/flechaTekae.jpg" id="flecha1">
+                    <img src="../img/flechaTekae.jpg" id="flecha2">
+                    <img src="../img/flechaTekae.jpg" id="flecha3">
+                    <img src="../img/flechaTekae.jpg" id="flecha4">
+                    <img src="../img/flechaTekae.jpg" id="flecha5">
+                </div>
+
+                <h2 style="color: #24E35C; font-size: 1.964vw; letter-spacing: 0.19px; font-family: ralewayRegular; position: relative; z-index: 2;">Una app, todos tus pagos</h2>
+
+                <div class="streamingContenedor">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+
+            <div class="redesFixed">
+                <a class="fbFixed" href="https://www.facebook.com/Tekae-104670141216565/" target="_blank">
+                    <img src="../img/fbBlanco.png" alt="">
+                </a>
+                <a class="igFixed" href="https://www.instagram.com/tekae_oficial/" target="_blank">
+                    <img src="../img/igBlanco.png" alt="">
+                </a>
+                <a class="twFixed" href="https://twitter.com/OficialTekae">
+                    <img src="../img/twBlanco.png" alt="">
+                </a>
+            </div>
+
+
+            <div id="panelNoScroll">
+
+            </div>
+
+        </div>
+
+        <!-- ============== SITIO MOVIL ================= -->
+
+        <div id="contenedorMovil" style="text-align: center;">
+            <div class="cabeceraMovil">
+                <div class="cabeceraMovilInner1">
+                    <a href="../">
+                        <img src="../img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="cabeceraMovilInner2">
+                </div>
+            </div>
+
+            <p class="titulo1">Una app,<br>todos tus pagos.</p>
+
+            <div class="streamingContenedor">
+                
+                <iframe id="iframeMovil" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+
+
+
+        </div>
+          <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyASPm8uAlo5KYCl3zXg57MFVOtgzR7vQNc",
+    authDomain: "fir-session150519.firebaseapp.com",
+    databaseURL: "https://fir-session150519.firebaseio.com",
+    projectId: "fir-session150519",
+    storageBucket: "fir-session150519.appspot.com",
+    messagingSenderId: "1032214342934",
+    appId: "1:1032214342934:web:854abf200c5a0ab0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  console.log(firebase,"firebase")
+</script>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+
+    </script>
+
+
+
+
+        <script src="/js/jquery.js" charset="utf-8"></script>
+        <script src="/js/main.js" charset="utf-8"></script>
+
+
+        <script type="text/javascript">
+            document.getElementById('contenedor').style.height = window.innerHeight + 'px';
+            document.getElementById('iframeMovil').setAttribute('width', window.innerWidth + 'px');
+
+            if(window.innerWidth > 575)
+            {
+                $('#contenedor').css({display: 'block'});
+                $('#contenedorMovil').css({display: 'none'});
+                $("#counter").css("flex-direction","row")
+
+            }
+            else
+            {
+                $('#contenedorMovil').css({display: 'block'});
+                $('#contenedor').css({display: 'none'});
+                $("#counter").css("flex-direction","column")
+
+            }
+
+            $(window).resize(function()
+            {
+                if(window.innerWidth > 575)
+                {
+                    $('#contenedor').css({display: 'block'});
+                    $('#contenedorMovil').css({display: 'none'});
+                    $("#counter").css("flex-direction","row")
+
+                }
+                else
+                {
+                    $('#contenedorMovil').css({display: 'block'});
+                    $('#contenedor').css({display: 'none'});
+                    $("#counter").css("flex-direction","column")
+
+                }
+
+            });
+
+
+        </script>
+
+    </body>
+</html>
